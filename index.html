@@ -1,55 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Signup Confirmed</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup Confirmed - St. Lawrence Server's Book</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #fdfcf9;
+      background: linear-gradient(135deg, #fdfcf9, #f2f0ec);
       color: #2e2e2e;
       font-family: 'Georgia', serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
+      animation: fadeInBody 1.5s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cross-icon {
+      font-size: 40px;
+      color: #4b2e83;
+      margin-bottom: 20px;
+      animation: fadeInCross 1.2s ease-in-out;
+    }
+
+    @keyframes fadeInCross {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     h1 {
       color: #4b2e83;
-      font-size: 28px;
-      margin-bottom: 10px;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      animation: fadeInElement 2s ease-in-out;
     }
 
     p {
-      font-size: 16px;
-      margin-bottom: 20px;
+      font-size: 1rem;
+      margin-bottom: 18px;
+      animation: fadeInElement 2.5s ease-in-out;
     }
 
     a {
+      display: inline-block;
       background-color: #4b2e83;
       color: #fff;
-      padding: 10px 20px;
+      padding: 12px 24px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(75, 46, 131, 0.4);
+      transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      animation: fadeInElement 3s ease-in-out;
     }
 
     a:hover {
       background-color: #3a2166;
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(58, 33, 102, 0.6);
+    }
+
+    @keyframes fadeInElement {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #777;
+      animation: fadeInElement 3.5s ease-in-out;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      a {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+      }
+
+      .cross-icon {
+        font-size: 32px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <div class="cross-icon">✝️</div>
+
   <h1>Signup Confirmed</h1>
   <p>Thank you for confirming your email. Your account is now active.</p>
   <p>You can now go back and refresh the page.</p>
 
-  <a href="/">Return to Homepage</a>
+  
+
+  <footer>
+    &copy; 2025 St. Lawrence Server's Book · Serving with Grace
+  </footer>
 
 </body>
 </html>
+
